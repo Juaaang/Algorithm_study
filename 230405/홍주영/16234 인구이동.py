@@ -22,11 +22,11 @@ def bfs(x, y):
 
 N, L, R = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
-ans = 0
+ans = 0     # 결과값
 while True:
-    cnt = 0
-    curS = [0]
-    g_cnt = [0]
+    cnt = 0      # 연합의 갯수
+    curS = [0]   # 리스트이 인덱스는 연합 번호의 합
+    g_cnt = [0]  # 리스트의 인덱스는 연합 갯수의 합
     visited = [[0] * N for _ in range(N)]
     for i in range(N):
         for j in range(N):

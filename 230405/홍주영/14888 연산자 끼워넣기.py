@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open('input.txt', 'r')
+# import sys
+# sys.stdin = open('input.txt', 'r')
 
 def cal(v1, v2, op):              # 계산하는 식
     if op == ops[0]:
@@ -24,7 +24,7 @@ def solve(k, curS):                          # dfs
     for i in range(4):
         if op_lis[i]:
             op_lis[i] -= 1
-            solve(k+1, cal(curS, lst[k+1], ops[i]))
+            solve(k+1, cal(curS, lst[k+1], ops[i])) # 맨앞부터 계산하기 때문
             op_lis[i] += 1
 
 N = int(input())
